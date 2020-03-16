@@ -12,12 +12,12 @@
   <ion-list>
 
   <ion-item>
-    <ion-label>Username</ion-label>
-    <ion-input></ion-input>
+    <ion-label>Username:  </ion-label>
+    <ion-input [(ngModel)]="username"></ion-input>
   </ion-item>
 
   <ion-item>
-    <ion-label>Password</ion-label>
+    <ion-label>Password: </ion-label>
     <ion-input></ion-input>
   </ion-item>
 
@@ -28,9 +28,11 @@
 
 </ion-list>
 
-  <ion-button shape = "round" size= "large" color= "success" routerLink="/account"><ion-text color="light">
+  <ion-button shape = "round" size= "large" color= "success" (click) = "login()"><ion-text color="light">
   Login
-</ion-text><ion-icon name="arrow-forward-circle-outline"></ion-icon></ion-button>
+</ion-text><ion-icon name="arrow-forward-circle-outline"></ion-icon></ion-button><br>
+
+  <ion-text>Login attempts: {{loginCount}}</ion-text>
 
   <ion-header collapse="condense">
     <ion-toolbar>
